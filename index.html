@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escáner de Código QR</title>
+    <link rel="stylesheet" href="./js/html5-qrcode.min.js">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="p5.min.js"></script>
+    <script src="./js/html5-qrcode.min.js"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+
+    <script type="text/javascript">
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("sw.js");
+        }
+    </script>
+</head>
+<body>
+    <h1>Escáner de Código QR</h1>
+    <div id="miDiv"></div>
+    <div id="reader" style="width: 300px; height: 300px;"></div>
+
+    <div id="miDiv2"></div>
+    <script src="./js/sketch.js"></script>
+
+    <div>
+        <h1>Generador de Códigos QR</h1>
+    
+        <!-- Generador de Código QR -->
+        <label for="text-input">ID del Mensaje:</label>
+        <input type="text" id="text-input" placeholder="ID del Mensaje">
+        <button onclick="generateQRCode()">Generar Código QR</button>
+        <div id="qrcode"></div>
+    
+    
+    </div>
+
+   
+</body>
+</html>
